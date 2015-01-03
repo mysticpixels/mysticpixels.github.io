@@ -19,6 +19,90 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+//hyperlinks
+a{
+	color: #1272d5;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color:#196f93;
+	}
+}
+
+//pulseanimation
+@keyframes "pulse2" {
+		 0% {
+		    -webkit-transform: scale(1.1);
+		   	-moz-transform: scale(1.1);
+		   	-o-transform: scale(1.1);
+		   	-ms-transform: scale(1.1);
+		   	transform: scale(1.1);
+		 }
+		 50% {
+		    -webkit-transform: scale(0.8);
+		   	-moz-transform: scale(0.8);
+		   	-o-transform: scale(0.8);
+		   	-ms-transform: scale(0.8);
+		   	transform: scale(0.8);
+		 }
+		 100% {
+		    -webkit-transform: scale(1);
+		   	-moz-transform: scale(1);
+		   	-o-transform: scale(1);
+		   	-ms-transform: scale(1);
+		   	transform: scale(1);
+		 }
+
+		}
+
+		@-moz-keyframes pulse2 {
+		 0% {
+		   -moz-transform: scale(1.1);
+		   transform: scale(1.1);
+		 }
+		 50% {
+		   -moz-transform: scale(0.8);
+		   transform: scale(0.8);
+		 }
+		 100% {
+		   -moz-transform: scale(1);
+		   transform: scale(1);
+		 }
+
+		}
+
+		@-webkit-keyframes "pulse2" {
+		 0% {
+		   -webkit-transform: scale(1.1);
+		   transform: scale(1.1);
+		 }
+		 50% {
+		   -webkit-transform: scale(0.8);
+		   transform: scale(0.8);
+		 }
+		 100% {
+		   -webkit-transform: scale(1);
+		   transform: scale(1);
+		 }
+
+		}
+
+		@-ms-keyframes "pulse2" {
+		 0% {
+		   -ms-transform: scale(1.1);
+		   transform: scale(1.1);
+		 }
+		 50% {
+		   -ms-transform: scale(0.8);
+		   transform: scale(0.8);
+		 }
+		 100% {
+		   -ms-transform: scale(1);
+		   transform: scale(1);
+		 }
+
+		}
+
 //importing essential library of less mixins for css3 from http://lesselements.com/
 @import "elements.less";
 
@@ -26,10 +110,12 @@ body{
 	width:100%;
 	.gradient(@color: #3b3435, @start: #000, @stop: #3b3435);
 	header, section, footer{
-		width: 1100px;
+		width: 75%;
 		margin:0 auto;
-		padding: 20px 50px 30px 50px;
+		padding: 20px 50px 50px 50px;
 	}
+
+	//header with the social icons
 	header{
 		background: #000 url(../../images/headeredge.png) no-repeat left bottom;
 		h1, h2{
@@ -44,6 +130,7 @@ body{
 		h2{
 			font-family: 'Crafty Girls', cursive;
 			font-size: 22px;
+			font-weight: lighter;
 			color:#d0cdcd;
 		}
 		.hdrs{
@@ -79,6 +166,82 @@ body{
 					background-image: url(../../images/iconlinkedin.png)
 				}
 			}
+		}
+	}
+
+	//intro section with the action buttons
+	.intro{
+		background: #fff url(../../images/introedge.png) no-repeat left bottom;
+		padding-bottom: 60px;
+		h3{
+			margin:0;
+			font-family: 'Signika', sans-serif;
+			font-weight: lighter;
+			font-size: 48px;
+			color:#424242;
+			letter-spacing: 0.00002em;
+			span{
+				color:#3699df;
+				&.withlove{
+					font-size: 20px;
+					font-family: 'Crafty Girls', cursive;
+					color:#aca4a4;
+					letter-spacing: 1;
+				}
+			}
+		}
+		p{
+			width: 70%;
+			margin: 10px 0 40px 0;
+			font-family: 'tahoma',arial;
+			font-size: 22px;
+			color:#6f6f6f;
+		}
+		a{
+			font-size: 24px;
+			font-weight: lighter;
+		}
+		.viewworks {
+		   border-top: 1px solid #96d1f8;
+		   background: #2285af;
+		   background: -webkit-gradient(linear, left top, left bottom, from(#2285af), to(#2285af));
+		   background: -webkit-linear-gradient(top, #2285af, #2285af);
+		   background: -moz-linear-gradient(top, #2285af, #2285af);
+		   background: -ms-linear-gradient(top, #2285af, #2285af);
+		   background: -o-linear-gradient(top, #2285af, #2285af);
+		   padding: 11px 22px;
+		   margin-right: 20px;
+		   -webkit-border-radius: 4px;
+		   -moz-border-radius: 4px;
+		   border-radius: 4px;
+		   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   box-shadow: rgba(0,0,0,1) 0 1px 0;
+		   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+		   color: white;
+		   font-size: 22px;
+		   font-family: Helvetica, Arial, Sans-Serif;
+		   font-weight: lighter;
+		   text-decoration: none;
+		   vertical-align: middle;
+		   }
+		.viewworks:hover {
+		   border-top-color: #28597a;
+		   background: #28597a;
+		   color: #ccc;
+		   }
+		.viewworks:active {
+		   border-top-color: #1b435e;
+		   background: #1b435e;
+		}
+		.withlove{
+			position: relative;
+			display: inline-block;
+			padding-right: 40px;
+			background: url(../../images/heart.png) no-repeat right center;
+			line-height: 40px;
+			vertical-align: bottom;
+			top: -10px;
 		}
 	}
 }
