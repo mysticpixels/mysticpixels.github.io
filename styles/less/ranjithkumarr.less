@@ -29,6 +29,11 @@ a{
 	}
 }
 
+//common utilities
+.hidden{
+	display: none;
+}
+
 //pulseanimation
 @keyframes "pulse2" {
 		 0% {
@@ -107,23 +112,27 @@ a{
 @import "elements.less";
 
 body{
+	font-family: 'tahoma',arial;
 	width:100%;
 	.gradient(@color: #3b3435, @start: #000, @stop: #3b3435);
 	header, section, footer{
 		width: 75%;
 		margin:0 auto;
-		padding: 20px 50px 50px 50px;
+		.headerinner, .introinner, timelineinner, footerinner{
+			padding: 20px 50px 50px 50px;
+		}
 	}
 
 	//header with the social icons
 	header{
-		background: #000 url(../../images/headeredge.png) no-repeat left bottom;
+		background: #000 url(../../images/headeredge.png) repeat-x left bottom;
 		h1, h2{
 			margin: 0;
 		}
 		h1{
 			font-family: 'Leckerli One', cursive;
-			font-size: 54px;
+			font-weight: lighter;
+			font-size: 48px;
 			color:#fff;
 			line-height: 65px;
 		}
@@ -171,15 +180,27 @@ body{
 
 	//intro section with the action buttons
 	.intro{
-		background: #fff url(../../images/introedge.png) no-repeat left bottom;
-		padding-bottom: 60px;
+		position: relative;
+		z-index: 99;
+		background: url(../../images/introedge.png) repeat-x left bottom;
+		padding-bottom: 50px;
+		.introinner{
+			padding-top: 0;
+			padding-bottom: 20px;
+		}
 		h3{
 			margin:0;
-			font-family: 'Signika', sans-serif;
+			//font-family: 'Ubuntu', sans-serif;
+			//font-family: 'Exo', sans-serif;
+			//font-family: 'Londrina Shadow', cursive;
+			font-family: 'Titillium Web', sans-serif;
+			//font-family: 'Leckerli One', cursive;
+			//font-family: 'Flavors', cursive;
+			//font-family: 'Advent Pro', sans-serif;
 			font-weight: lighter;
-			font-size: 48px;
+			font-size: 45px;
 			color:#424242;
-			letter-spacing: 0.00002em;
+/*			letter-spacing: 0.00002em;*/
 			span{
 				color:#3699df;
 				&.withlove{
@@ -195,7 +216,8 @@ body{
 			margin: 10px 0 40px 0;
 			font-family: 'tahoma',arial;
 			font-size: 22px;
-			color:#6f6f6f;
+			font-weight: lighter;
+			color:#8d8989;
 		}
 		a{
 			font-size: 24px;
@@ -219,7 +241,7 @@ body{
 		   box-shadow: rgba(0,0,0,1) 0 1px 0;
 		   text-shadow: rgba(0,0,0,.4) 0 1px 0;
 		   color: white;
-		   font-size: 22px;
+		   font-size: 24px;
 		   font-family: Helvetica, Arial, Sans-Serif;
 		   font-weight: lighter;
 		   text-decoration: none;
@@ -228,7 +250,7 @@ body{
 		.viewworks:hover {
 		   border-top-color: #28597a;
 		   background: #28597a;
-		   color: #ccc;
+		   color: #fff;
 		   }
 		.viewworks:active {
 		   border-top-color: #1b435e;
@@ -242,6 +264,125 @@ body{
 			line-height: 40px;
 			vertical-align: bottom;
 			top: -10px;
+		}
+	}
+
+	//timeline section
+	.timeline{
+		padding-bottom: 0;
+		position: relative;
+		top: -18px;
+		z-index: 999;
+		background: #fff url(../../images/cloudbg.png) no-repeat right top;
+		.timelineinner{
+			padding: 0;
+			background: url(../../images/perurland.png) no-repeat right bottom;
+			nav, .timelineitems{
+				float: left;
+			}
+			nav{
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				width: 15px;
+				height: 270px;
+				background: #f0f0f0;
+				padding-top: 20px;
+				.inner-shadow(0, 2px, 2px, 0.4);
+				li{
+					position: relative;
+					left: -5px;
+					list-style: none;
+					text-indent: -99999px;
+					a{
+						display: block;
+						height: 15px;
+						width: 15px;
+						border-radius: 24px;
+						background: #aca5a5;
+						border: solid 5px #8b8888;
+						margin-bottom: 30px;
+						&:hover{
+							border-color:#000;
+						}
+					}
+					&.active{
+						left: -8px;
+						a{
+							background: #5ab1e8;
+							border-color:#2a6488;
+							width: 22px;
+							height: 22px;							
+						}
+					}
+				}
+			}
+			.timelineitems{
+				width: 100%;
+				padding: 50px 50px 50px 110px;
+			}
+			h3{
+				display: none;
+			}
+			article{
+				h4{
+					font-size: 100px;
+					font-weight: lighter;
+					margin:0 10px 30px 0;
+					line-height: 75px;
+				}
+				h4,h5,h6{
+					margin-top: 0;
+				}
+				h4, .place{
+					float: left;
+					position: relative;
+					z-index: 999;
+				}
+				.place{
+					h5,h6{
+						margin-bottom: 0;
+					}
+					h5{
+						color: #401224;
+						font-size: 24px;
+						font-weight: lighter;
+						margin-bottom: 5px;
+					}
+					h6{
+						padding-left: 25px;
+						line-height: 30px;
+						color: #746f6f;
+						font-size: 22px;
+						font-weight: lighter;
+						background: url(../../images/iconlocation.png) no-repeat left center;
+					}
+				}
+				.story{
+					position: relative;
+					z-index: 999;
+					display: block;
+					clear: both;
+					width: 40%;
+					p{
+						font-size: 16px;
+						color:#383737;
+					}
+					p:first-child{
+						font-size: 18px;
+						color:#000;
+					}
+				}
+				.building{
+					height: 467px;
+					width: 526px;
+					position: absolute;
+					right: 10px;
+					bottom: 0;
+					z-index: 99;
+					background: url(../../images/perurkoil.png) no-repeat left bottom;
+				}
+			}
 		}
 	}
 }
