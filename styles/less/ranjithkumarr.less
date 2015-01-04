@@ -115,7 +115,7 @@ a{
 @import "elements.less";
 
 body{
-	font-family: 'tahoma',arial;
+	font-family: 'Open Sans', sans-serif;
 	width:100%;
 	.gradient(@color: #3b3435, @start: #000, @stop: #3b3435);
 	header, section, footer{
@@ -139,6 +139,9 @@ body{
 			font-size: 48px;
 			color:#fff;
 			line-height: 65px;
+			span{
+				color: #cfcfcf;
+			}
 		}
 		h2{
 			font-family: 'Crafty Girls', cursive;
@@ -167,16 +170,28 @@ body{
 					background-color: transparent;
 				}
 				&.twitter a{
-					background-image: url(../../images/icontwitter.png)
+					background-image: url(../../images/icontwitter.png);
+					&:hover{
+						background-image: url(../../images/icontwitterhover.png);
+					}
 				}
 				&.instagram a{
-					background-image: url(../../images/iconinstagram.png)
+					background-image: url(../../images/iconinstagram.png);
+					&:hover{
+						background-image: url(../../images/iconinstagramhover.png);
+					}
 				}
 				&.behance a{
-					background-image: url(../../images/iconbehance.png)
+					background-image: url(../../images/iconbehance.png);
+					&:hover{
+						background-image: url(../../images/iconbehancehover.png);
+					}
 				}
 				&.linkedin a{
-					background-image: url(../../images/iconlinkedin.png)
+					background-image: url(../../images/iconlinkedin.png);
+					&:hover{
+						background-image: url(../../images/iconlinkedinhover.png)
+					}
 				}
 			}
 		}
@@ -197,12 +212,13 @@ body{
 			//font-family: 'Ubuntu', sans-serif;
 			//font-family: 'Exo', sans-serif;
 			//font-family: 'Londrina Shadow', cursive;
-			font-family: 'Titillium Web', sans-serif;
+			//font-family: 'Titillium Web', sans-serif;
+			font-family: 'Fredericka the Great', cursive;
 			//font-family: 'Leckerli One', cursive;
 			//font-family: 'Flavors', cursive;
 			//font-family: 'Advent Pro', sans-serif;
 			font-weight: lighter;
-			font-size: 45px;
+			font-size: 40px;
 			color:#424242;
 			line-height: 55px;
 /*			letter-spacing: 0.00002em;*/
@@ -219,10 +235,9 @@ body{
 		p{
 			width: 70%;
 			margin: 10px 0 40px 0;
-			font-family: 'tahoma',arial;
 			font-size: 22px;
 			font-weight: lighter;
-			color:#8d8989;
+			color:#000;
 		}
 		a{
 			font-size: 24px;
@@ -289,14 +304,16 @@ body{
 				position: absolute;
 				left: 50px;
 				top: 50px;
-				width: 12px;
+				width: 4px;
 				height: 270px;
+				//background: #fff;
 				background: #f0f0f0;
+				//border:solid 1px #e6e6e6;
 				padding-top: 20px;
 				.inner-shadow(0, 2px, 2px, 0.4);
 				li{
 					position: relative;
-					left: -6px;
+					left: -7px;
 					list-style: none;
 					text-indent: -99999px;
 					a{
@@ -304,15 +321,15 @@ body{
 						height: 15px;
 						width: 15px;
 						border-radius: 24px;
-						background: #aca5a5;
-						border: solid 5px #8b8888;
+						background: #c9c9c9;
+						border: solid 2px #bdbaba;
 						margin-bottom: 30px;
 						&:hover{
 							border-color:#000;
 						}
 					}
 					&.active{
-						left: -10px;
+						left: -11px;
 						a{
 							background: #5ab1e8;
 							border-color:#2a6488;
@@ -382,13 +399,13 @@ body{
 					}
 				}
 				.building{
-					height: 467px;
+					height: 485px;
 					width: 770px;
 					position: absolute;
 					right: 0;
 					bottom: 0;
 					z-index: 99;
-					background: url(../../images/chennaicentral.png) no-repeat right bottom;
+					background: url(../../images/indiagate.png) no-repeat right bottom;
 				}
 			}
 		}
@@ -402,6 +419,7 @@ body{
 		z-index: 9999;
 		.specialitiesinner{
 			padding-top: 40px;
+			padding-bottom: 80px;
 		}
 		h3{
 			font-family: 'Leckerli One', cursive;
@@ -416,15 +434,55 @@ body{
 				margin-right: 55px;
 				float: left;
 				list-style: none;
-				&:first-child{
-
-				}
 				a{
 					display: block;
 					height: 145px;
 					width: 145px;
 					border-radius: 10px;
+					border:solid 5px #cce2ec;
 					background: #fff;
+					.drop-shadow(0, 1px, 2px, 0.5);
+					color:#434547;
+					text-align: center;
+					background-repeat: no-repeat;
+					background-position: center center;
+					span{
+						display: block;
+						text-align: center;
+						position: relative;
+						bottom: -160px;
+						left: 0;
+					}
+				}
+				&.ux{
+					a{
+					background-image: url(../../images/iconux.png);
+					}
+				}
+				&.pixel{
+					a{
+					background-image: url(../../images/iconpixelperfect.png);
+					}
+				}
+				&.proto{
+					a{
+					background-image: url(../../images/icontags.png);
+					}
+				}
+				&.internet{
+					a{
+					background-image: url(../../images/iconux.png);
+					}
+				}
+				&.learner{
+					a{
+					background-image: url(../../images/iconux.png);
+					}
+				}
+				&.internet{
+					a{
+					background-image: url(../../images/iconinternet.png);
+					}
 				}
 			}
 		}
