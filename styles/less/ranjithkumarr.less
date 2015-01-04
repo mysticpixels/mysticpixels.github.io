@@ -1,10 +1,15 @@
-/*****************************************/
-/** Core styles for ranjithkumarr.com **/
-/*****************************************/
+/*============================================================*/
+/*------------------------------------------------------------*/
+/** core rules for ranjithkumarr.com **/
+/*------------------------------------------------------------*/
+/*============================================================*/
 
+
+/*****************************************/
 /** essential utility rules **/
+/*****************************************/
 
-//clearfix
+//clearfix*****************************************/
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -19,7 +24,7 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-//hyperlinks
+//hyperlinks*****************************************/
 a{
 	color: #1272d5;
 	text-decoration: none;
@@ -29,12 +34,12 @@ a{
 	}
 }
 
-//common utilities
+//common utilities*****************************************/
 .hidden{
 	display: none;
 }
 
-//pulseanimation
+//pulseanimation*****************************************/
 @keyframes "pulse2" {
 		 0% {
 		    -webkit-transform: scale(1.1);
@@ -57,7 +62,6 @@ a{
 		   	-ms-transform: scale(1);
 		   	transform: scale(1);
 		 }
-
 		}
 
 		@-moz-keyframes pulse2 {
@@ -73,7 +77,6 @@ a{
 		   -moz-transform: scale(1);
 		   transform: scale(1);
 		 }
-
 		}
 
 		@-webkit-keyframes "pulse2" {
@@ -108,7 +111,7 @@ a{
 
 		}
 
-//importing essential library of less mixins for css3 from http://lesselements.com/
+//importing essential library of less mixins for css3 from http://lesselements.com*****************************************/
 @import "elements.less";
 
 body{
@@ -116,14 +119,15 @@ body{
 	width:100%;
 	.gradient(@color: #3b3435, @start: #000, @stop: #3b3435);
 	header, section, footer{
-		width: 75%;
+		width: 90%;
+		max-width: 1200px;
 		margin:0 auto;
-		.headerinner, .introinner, timelineinner, footerinner{
+		.headerinner, .introinner, .specialitiesinner, .footerinner{
 			padding: 20px 50px 50px 50px;
 		}
 	}
 
-	//header with the social icons
+	//header with the social icons*****************************************/
 	header{
 		background: #000 url(../../images/headeredge.png) repeat-x left bottom;
 		h1, h2{
@@ -146,7 +150,7 @@ body{
 			float: left;
 		}
 
-		//socialicons in the header
+		//socialicons in the header*****************************************/
 		ul{
 			float: right;
 			li{
@@ -178,14 +182,14 @@ body{
 		}
 	}
 
-	//intro section with the action buttons
+	//intro section with the action buttons*****************************************/
 	.intro{
 		position: relative;
 		z-index: 99;
-		background: url(../../images/introedge.png) repeat-x left bottom;
+		background: #fff url(../../images/introedge.png) repeat-x left bottom;
 		padding-bottom: 50px;
 		.introinner{
-			padding-top: 0;
+			padding-top: 10px;
 			padding-bottom: 20px;
 		}
 		h3{
@@ -200,6 +204,7 @@ body{
 			font-weight: lighter;
 			font-size: 45px;
 			color:#424242;
+			line-height: 55px;
 /*			letter-spacing: 0.00002em;*/
 			span{
 				color:#3699df;
@@ -267,7 +272,7 @@ body{
 		}
 	}
 
-	//timeline section
+	//timeline section*****************************************/
 	.timeline{
 		padding-bottom: 0;
 		position: relative;
@@ -284,14 +289,14 @@ body{
 				position: absolute;
 				left: 50px;
 				top: 50px;
-				width: 15px;
+				width: 12px;
 				height: 270px;
 				background: #f0f0f0;
 				padding-top: 20px;
 				.inner-shadow(0, 2px, 2px, 0.4);
 				li{
 					position: relative;
-					left: -5px;
+					left: -6px;
 					list-style: none;
 					text-indent: -99999px;
 					a{
@@ -307,7 +312,7 @@ body{
 						}
 					}
 					&.active{
-						left: -8px;
+						left: -10px;
 						a{
 							background: #5ab1e8;
 							border-color:#2a6488;
@@ -319,17 +324,20 @@ body{
 			}
 			.timelineitems{
 				width: 100%;
-				padding: 50px 50px 50px 110px;
+				padding: 60px 50px 80px 110px;
 			}
 			h3{
 				display: none;
 			}
 			article{
 				h4{
-					font-size: 100px;
-					font-weight: lighter;
+					font-size: 90px;
+					//font-weight: lighter;
 					margin:0 10px 30px 0;
 					line-height: 75px;
+					background: url(../../images/textmask.png) no-repeat left bottom;
+			   -webkit-background-clip: text;
+			   -webkit-text-fill-color: transparent;
 				}
 				h4,h5,h6{
 					margin-top: 0;
@@ -375,12 +383,48 @@ body{
 				}
 				.building{
 					height: 467px;
-					width: 526px;
+					width: 770px;
 					position: absolute;
-					right: 10px;
+					right: 0;
 					bottom: 0;
 					z-index: 99;
-					background: url(../../images/perurkoil.png) no-repeat left bottom;
+					background: url(../../images/chennaicentral.png) no-repeat right bottom;
+				}
+			}
+		}
+	}
+
+	//specialities section*****************************************/
+	.specialities{
+		background: url(../../images/specialitiesedge.png) repeat-x left top;
+		position: relative;
+		top: -25px;
+		z-index: 9999;
+		.specialitiesinner{
+			padding-top: 40px;
+		}
+		h3{
+			font-family: 'Leckerli One', cursive;
+			font-size: 36px;
+			font-weight: lighter;
+			margin:0 0 20px 0;
+		}
+		ul{
+			padding:0;
+			margin:0;
+			li{
+				margin-right: 55px;
+				float: left;
+				list-style: none;
+				&:first-child{
+
+				}
+				a{
+					display: block;
+					height: 145px;
+					width: 145px;
+					border-radius: 10px;
+					background: #fff;
 				}
 			}
 		}
