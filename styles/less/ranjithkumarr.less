@@ -122,9 +122,12 @@ body{
 		width: 90%;
 		max-width: 1200px;
 		margin:0 auto;
-		.headerinner, .introinner, .specialitiesinner, .footerinner{
+		.headerinner, .introinner, .specialitiesinner{
 			padding: 20px 50px 50px 50px;
 		}
+	}
+	.timeline, .intro, .specialities, footer{
+			position: relative;
 	}
 
 	//header with the social icons*****************************************/
@@ -199,7 +202,6 @@ body{
 
 	//intro section with the action buttons*****************************************/
 	.intro{
-		position: relative;
 		z-index: 99;
 		background: #fff url(../../images/introedge.png) repeat-x left bottom;
 		padding-bottom: 50px;
@@ -291,7 +293,6 @@ body{
 	//timeline section*****************************************/
 	.timeline{
 		padding-bottom: 0;
-		position: relative;
 		top: -18px;
 		z-index: 999;
 		background: #fff url(../../images/cloudbg.png) no-repeat right top;
@@ -421,12 +422,11 @@ body{
 	//specialities section*****************************************/
 	.specialities{
 		background: url(../../images/specialitiesedge.png) repeat-x left top;
-		position: relative;
 		top: -25px;
 		z-index: 9999;
 		.specialitiesinner{
 			padding-top: 40px;
-			padding-bottom: 80px;
+			padding-bottom: 110px;
 		}
 		h3{
 			font-family: 'Leckerli One', cursive;
@@ -489,6 +489,44 @@ body{
 				&.internet{
 					a{
 					background-image: url(../../images/iconinternet.png);
+					}
+				}
+			}
+		}
+	}
+
+	//footer*****************************************/
+	footer{
+		top: -37px;
+		z-index: 99999;
+		.footerinner{
+			background: url(../../images/footeredge.png) repeat-x left top;
+			padding: 50px 50px 90px 50px;
+			img, .footerText{
+				float: left;
+			}
+			img{
+				border-radius: 144px;
+			}
+			.footerText{
+				width: 80%;
+				padding-left: 30px;
+				color: #5f5d5d;
+				.borderedText{
+					padding: 10px 0;
+					border: dashed 1px #979797;
+					border-width: 1px 0 1px 0;
+					span{
+						position: relative;
+					}
+					span.heart{
+						display: inline-block;
+						height: 40px;
+						width: 40px;
+						position: absolute;
+						top: -20px;
+						overflow: hidden;
+						text-indent: -9999px;
 					}
 				}
 			}
