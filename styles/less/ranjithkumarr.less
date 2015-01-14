@@ -338,6 +338,7 @@ body{
 						margin-bottom: 30px;
 						&:hover{
 							border-color:#000;
+							color:#000;
 						}
 					}
 					&.active{
@@ -419,7 +420,33 @@ body{
 					right: 0;
 					bottom: 0;
 					z-index: 99;
-					background: url(../../images/chennaicentral.png) no-repeat right bottom;
+					background-repeat: no-repeat;
+					background-position: right bottom;
+				}
+				&.chennaistory{
+					.building{
+						background-image: url(../../images/chennaicentral.png);
+					}
+				}
+				&.infystory{
+					.building{
+						background-image: url(../../images/infy.png);
+					}
+				}
+				&.bangalorestory{
+					.building{
+						background-image: url(../../images/bangalore.png);
+					}
+				}
+				&.noidastory{
+					.building{
+						background-image: url(../../images/indiagate.png);
+					}
+				}
+				&.coimbatorestory{
+					.building{
+						background-image: url(../../images/perurkoil.png);
+					}
 				}
 			}
 		}
@@ -428,7 +455,7 @@ body{
 	//specialities section*****************************************/
 	.specialities{
 		background: url(../../images/specialitiesedge.png) repeat-x left top;
-		top: -25px;
+		top: -28px;
 		z-index: 9999;
 		.specialitiesinner{
 			padding-top: 40px;
@@ -503,7 +530,7 @@ body{
 
 	//footer*****************************************/
 	footer{
-		top: -37px;
+		top: -40px;
 		z-index: 99999;
 		.footerinner{
 			background: url(../../images/footeredge.png) repeat-x left top;
