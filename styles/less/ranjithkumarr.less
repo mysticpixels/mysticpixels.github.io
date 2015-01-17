@@ -179,27 +179,27 @@ body{
 					background-color: transparent;
 				}
 				&.twitter a{
-					background-image: url(../../images/icontwitter.png);
+					background-image: url(../../images/icons/icontwitter.png);
 					&:hover{
-						background-image: url(../../images/icontwitterhover.png);
+						background-image: url(../../images/icons/icontwitterhover.png);
 					}
 				}
 				&.instagram a{
-					background-image: url(../../images/iconinstagram.png);
+					background-image: url(../../images/icons/iconinstagram.png);
 					&:hover{
-						background-image: url(../../images/iconinstagramhover.png);
+						background-image: url(../../images/icons/iconinstagramhover.png);
 					}
 				}
 				&.behance a{
-					background-image: url(../../images/iconbehance.png);
+					background-image: url(../../images/icons/iconbehance.png);
 					&:hover{
-						background-image: url(../../images/iconbehancehover.png);
+						background-image: url(../../images/icons/iconbehancehover.png);
 					}
 				}
 				&.linkedin a{
-					background-image: url(../../images/iconlinkedin.png);
+					background-image: url(../../images/icons/iconlinkedin.png);
 					&:hover{
-						background-image: url(../../images/iconlinkedinhover.png)
+						background-image: url(../../images/icons/iconlinkedinhover.png)
 					}
 				}
 			}
@@ -304,7 +304,23 @@ body{
 		background: #fff url(../../images/cloudbg.png) no-repeat right top;
 		.timelineinner{
 			padding: 0;
-			background: url(../../images/perurland.png) no-repeat right bottom;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			&.chennai{
+				background-image: url(../../images/chennailand.png);
+			}
+			&.infy{
+				background-image: url(../../images/infyland.png);
+			}
+			&.bangalore{
+				background-image: url(../../images/bangaloreland.png);
+			}
+			&.noida{
+				background-image: url(../../images/noidaland.png);
+			}
+			&.coimbatore{
+				background-image: url(../../images/perurland.png);
+			}
 			nav, .timelineitems{
 				float: left;
 			}
@@ -425,27 +441,27 @@ body{
 				}
 				&.chennaistory{
 					.building{
-						background-image: url(../../images/chennaicentral.png);
+						background-image: url(../../images/buildings/chennaicentral.png);
 					}
 				}
 				&.infystory{
 					.building{
-						background-image: url(../../images/infy.png);
+						background-image: url(../../images/buildings/infy.png);
 					}
 				}
 				&.bangalorestory{
 					.building{
-						background-image: url(../../images/bangalore.png);
+						background-image: url(../../images/buildings/bangalore.png);
 					}
 				}
 				&.noidastory{
 					.building{
-						background-image: url(../../images/indiagate.png);
+						background-image: url(../../images/buildings/indiagate.png);
 					}
 				}
 				&.coimbatorestory{
 					.building{
-						background-image: url(../../images/perurkoil.png);
+						background-image: url(../../images/buildings/perurkoil.png);
 					}
 				}
 			}
@@ -470,6 +486,7 @@ body{
 		ul{
 			padding:0;
 			margin:0;
+			position: relative;
 			li{
 				margin-right: 55px;
 				float: left;
@@ -493,6 +510,11 @@ body{
 						bottom: -160px;
 						left: 0;
 					}
+				}
+				&.active{
+					position: absolute;
+					left: 0;
+					z-index: 999999;
 				}
 				&.ux{
 					a{

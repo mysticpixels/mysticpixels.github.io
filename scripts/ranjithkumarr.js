@@ -13,6 +13,7 @@
 			});
 			return false;
 		};
+
 		//getting the order count of the nav item trigger
 		function gettriggercount(collection, domelement){
 			var count=$(collection).index(domelement);
@@ -23,7 +24,33 @@
 		$(".timelineinner nav li a").click(function(){
 				resetactivelists();//removes all .active classes
 				var triggercount=gettriggercount(".timelineinner nav li", $(this).parent())+1;//fetching the order number of the trigger, to be used to show res
-				//alert(triggercount);
+
+				//adding classes to timelineinner to add the land bg image to respective buildings
+				var locationlist = ["chennai", "infy", "bangalore", "noida", "coimbatore"]
+				var loccount = 0;
+
+				//removing all location classes from timelineinner to avoid duplicate ones
+				$(".timelineinner nav li").each(function(){
+					$(".timelineinner").removeClass(locationlist[loccount]);
+					loccount++;
+				});
+				switch(triggercount){
+					case 1:
+						$('.timelineinner').addClass('chennai');
+						break;
+					case 2:
+						$('.timelineinner').addClass('infy');
+						break;
+					case 3:
+						$('.timelineinner').addClass('bangalore');
+						break;
+					case 4:
+						$('.timelineinner').addClass('noida');
+						break;
+					case 5:
+						$('.timelineinner').addClass('coimbatore');
+						break;
+				}
 				var i=0;
 				$(".timelineitems article").each(function(){
 					i++;
@@ -35,6 +62,24 @@
 					}
 				});
 				$(this).parent().addClass("active");
+				return false;
+		});
+
+		//interaction for specialities section
+		$(".specialities li").click(function(){
+				var triggercount=gettriggercount(".specialities li", $(this))+1;//fetching the order number of the trigger, to be used to show res
+				//alert(triggercount);
+				var i=0;
+				$(".specialities li").each(function(){
+					i++;
+					var cls=$(this).attr('class');
+					if($(this).hasClass('hidden')==false)
+						$(this).addClass('hidden');
+					if (i==triggercount){
+						$(this).removeClass('hidden');
+					}
+				});
+				$(this).addClass("active");
 				return false;
 		});
 	});
