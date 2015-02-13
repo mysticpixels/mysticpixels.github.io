@@ -1,3 +1,6 @@
+//importing animation rules
+@import "animations.less";
+
 /*============================================================*/
 /*------------------------------------------------------------*/
 /** core rules for ranjithkumarr.com **/
@@ -38,188 +41,6 @@ a{
 .hidden{
 	display: none;
 }
-
-//specialitieshoveranimation*****************************************/
-@-webkit-keyframes uxhover{
-	from{
-		background-position: 0 bottom;
-		background-color: #fff;
-		border-color: #cce2ec;
-	}
-	to{
-		background-position: -145px bottom;
-		background-color: #e2f6ff;
-		border-color: #000;
-	}
-}
-@-webkit-keyframes pixelhover{
-	from{
-		background-position: -290px bottom;
-		background-color: #fff;
-		border-color: #cce2ec;
-	}
-	to{
-		background-position: -435px bottom;
-		background-color: #e2f6ff;
-		border-color: #000;
-	}
-}
-@-webkit-keyframes protohover{
-	from{
-		background-position: -580px bottom;
-		background-color: #fff;
-		border-color: #cce2ec;
-	}
-	to{
-		background-position: -725px bottom;
-		background-color: #e2f6ff;
-		border-color: #000;
-	}
-}
-@-webkit-keyframes internethover{
-	from{
-		background-position: -870px bottom;
-		background-color: #fff;
-		border-color: #cce2ec;
-	}
-	to{
-		background-position: -1015px bottom;
-		background-color: #e2f6ff;
-		border-color: #000;
-	}
-}
-@-webkit-keyframes learnerhover{
-	from{
-		background-position: -1160px bottom;
-		background-color: #fff;
-		border-color: #cce2ec;
-	}
-	to{
-		background-position: -1305px bottom;
-		background-color: #e2f6ff;
-		border-color: #000;
-	}
-}
-
-//buildingimagesanimation*****************************************/
-@-webkit-keyframes chennaitransition{
-	from{
-		background-position: 0 bottom;
-		opacity: 0%;
-	}
-	to{
-		background-position: 0 bottom;
-		opacity: 100%;
-	}
-}
-@-webkit-keyframes infytransition{
-	from{
-		background-position: 10px bottom;
-	}
-	to{
-		background-position: -770px bottom;
-	}
-}
-@-webkit-keyframes bangaloretransition{
-	from{
-		background-position: -770px bottom;
-	}
-	to{
-		background-position: -1540px bottom;
-	}
-}
-@-webkit-keyframes noidatransition{
-	from{
-		background-position: -1540px bottom;
-	}
-	to{
-		background-position: -2320px bottom;
-	}
-}
-@-webkit-keyframes coimbatoretransition{
-	from{
-		background-position: -2320px bottom;
-	}
-	to{
-		background-position: -3080px bottom;
-	}
-}
-
-//pulseanimation*****************************************/
-.pulse2 {
-			-webkit-animation: pulse2 1s linear infinite;
-			-moz-animation: pulse2 1s linear infinite;
-			-ms-animation: pulse2 1s linear infinite;
-			animation: pulse2 1s linear infinite;
-}
-@keyframes "pulse2" {
-	0% {
-	  -webkit-transform: scale(1.1);
-	 	-moz-transform: scale(1.1);
-	 	-o-transform: scale(1.1);
-	 	-ms-transform: scale(1.1);
-	 	transform: scale(1.1);
-	}
-	50% {
-	  -webkit-transform: scale(0.8);
-	 	-moz-transform: scale(0.8);
-	 	-o-transform: scale(0.8);
-	 	-ms-transform: scale(0.8);
-	 	transform: scale(0.8);
-	}
-	100% {
-	  -webkit-transform: scale(1);
-	 	-moz-transform: scale(1);
-	 	-o-transform: scale(1);
-	 	-ms-transform: scale(1);
-	 	transform: scale(1);
-	}
-	}
-
-	@-moz-keyframes pulse2 {
-	 0% {
-	   -moz-transform: scale(1.1);
-	   transform: scale(1.1);
-	 }
-	 50% {
-	   -moz-transform: scale(0.8);
-	   transform: scale(0.8);
-	 }
-	 100% {
-	   -moz-transform: scale(1);
-	   transform: scale(1);
-	 }
-	}
-
-	@-webkit-keyframes "pulse2" {
-	 0% {
-	   -webkit-transform: scale(1.1);
-	   transform: scale(1.1);
-	 }
-	 50% {
-	   -webkit-transform: scale(0.8);
-	   transform: scale(0.8);
-	 }
-	 100% {
-	   -webkit-transform: scale(1);
-	   transform: scale(1);
-	 }
-	}
-
-	@-ms-keyframes "pulse2" {
-	 0% {
-	   -ms-transform: scale(1.1);
-	   transform: scale(1.1);
-	 }
-	 50% {
-	   -ms-transform: scale(0.8);
-	   transform: scale(0.8);
-	 }
-	 100% {
-	   -ms-transform: scale(1);
-	   transform: scale(1);
-	 }
-	}
 
 //importing essential library of less mixins for css3 from http://lesselements.com*****************************************/
 @import "elements.less";
@@ -685,7 +506,13 @@ body{
 		z-index: 99999;
 		.footerinner{
 			background: url(../../images/footeredge.png) repeat-x left top;
-			padding: 50px 50px 90px 50px;
+			padding: 50px 50px 25px 50px;
+			&:after{
+				background: red;
+				display: block;
+				height: 30px;
+				width: 300px;
+			}
 			img, .footerText{
 				float: left;
 			}
@@ -714,6 +541,12 @@ body{
 					}
 				}
 			}
+		}
+		&:after{
+			display: block;
+			position: absolute;
+			bottom: 0;
+			background: red;
 		}
 	}
 }
