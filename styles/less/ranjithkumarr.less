@@ -366,35 +366,41 @@ body{
 					z-index: 99;
 					background-repeat: no-repeat;
 					background-image: url(../../images/buildings/buildingssprite.png);
+					transition: background-position 0.3s ease;
 				}
 				&.chennaistory{
 					.building{
-						-webkit-animation: chennaitransition .5s 1;
-						-webkit-animation-fill-mode:both;						
+						background-position: 0 bottom;
+						// -webkit-animation: chennaitransition .5s 1;
+						// -webkit-animation-fill-mode:both;						
 					}
 				}
 				&.infystory{
 					.building{
-						-webkit-animation: infytransition .5s 1;
-						-webkit-animation-fill-mode:both;
+						background-position: -770px bottom;
+						// -webkit-animation: infytransition .5s 1;
+						// -webkit-animation-fill-mode:both;
 					}
 				}
 				&.bangalorestory{
 					.building{
-						-webkit-animation: bangaloretransition .5s 1;
-						-webkit-animation-fill-mode:both;
+						background-position: -1540px bottom;
+						// -webkit-animation: bangaloretransition .5s 1;
+						// -webkit-animation-fill-mode:both;
 					}
 				}
 				&.noidastory{
 					.building{
-						-webkit-animation: noidatransition .5s 1;
-						-webkit-animation-fill-mode:both;
+						background-position: -2320px bottom;
+						// -webkit-animation: noidatransition .5s 1;
+						// -webkit-animation-fill-mode:both;
 					}
 				}
 				&.coimbatorestory{
 					.building{
-						-webkit-animation: coimbatoretransition .5s 1;
-						-webkit-animation-fill-mode:both;
+						background-position: -3080px bottom;
+						// -webkit-animation: coimbatoretransition .5s 1;
+						// -webkit-animation-fill-mode:both;
 					}
 				}
 			}
@@ -444,6 +450,9 @@ body{
 						padding-top: 10px;
 						left: 0;
 					}
+					&:hover{
+						transition: all 0.3s ease;
+					}
 					background-image: url(../../images/icons/specialitiessprite.png);
 				}
 				&.active{
@@ -455,8 +464,9 @@ body{
 					a{
 						background-position: left bottom;
 						&:hover{
-							-webkit-animation: uxhover .2s 1;
-							-webkit-animation-fill-mode:both;							
+							background-position: -145px bottom;
+							// -webkit-animation: uxhover .2s 1;
+							// -webkit-animation-fill-mode:both;							
 						}
 					}
 				}
@@ -464,8 +474,9 @@ body{
 					a{
 						background-position: -290px bottom;
 						&:hover{
-							-webkit-animation: pixelhover .2s 1;
-							-webkit-animation-fill-mode:forwards;												
+							background-position: -435px bottom;
+							// -webkit-animation: pixelhover .2s 1;
+							// -webkit-animation-fill-mode:forwards;												
 						}
 					}
 				}
@@ -473,8 +484,9 @@ body{
 					a{
 						background-position: -580px bottom;
 						&:hover{
-							-webkit-animation: protohover .2s 1;
-							-webkit-animation-fill-mode:both;												
+							background-position: -725px bottom;
+							// -webkit-animation: protohover .2s 1;
+							// -webkit-animation-fill-mode:both;												
 						}
 					}
 				}
@@ -482,8 +494,9 @@ body{
 					a{
 						background-position: -870px bottom;
 						&:hover{
-							-webkit-animation: internethover .2s 1;
-							-webkit-animation-fill-mode:both;												
+							background-position: -1015px bottom;
+							// -webkit-animation: internethover .2s 1;
+							// -webkit-animation-fill-mode:both;												
 						}
 					}
 				}
@@ -491,8 +504,9 @@ body{
 					a{
 						background-position: -1160px bottom;
 						&:hover{
-							-webkit-animation: learnerhover .2s 1;
-							-webkit-animation-fill-mode:both;												
+							background-position: -1305px bottom;
+							// -webkit-animation: learnerhover .2s 1;
+							// -webkit-animation-fill-mode:both;												
 						}
 					}
 				}
