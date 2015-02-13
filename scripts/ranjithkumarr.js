@@ -73,10 +73,10 @@
 				$(".specialities li").each(function(){
 					i++;
 					var cls=$(this).attr('class');
-					if($(this).hasClass('hidden')==false)
-						$(this).addClass('hidden');
+					if($(this).hasClass('trans')==false)
+						$(this).addClass('trans');
 					if (i==triggercount){
-						$(this).removeClass('hidden');
+						$(this).removeClass('trans');
 					}
 				});
 				$(this).addClass("active");
