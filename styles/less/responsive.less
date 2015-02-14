@@ -1,0 +1,125 @@
+//***************************************************************************************//
+//responsive rules
+//***************************************************************************************//
+
+//xs only
+@media(max-width: 767px) {
+	body{
+		header{
+			.headerinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-bottom: 20px;
+			}
+			.hdrs{
+				display: block;
+				float:none;
+			}
+			h1{
+				font-size: 40px;
+				line-height: 50px;
+			}
+			h2{
+				font-size: 18px;
+			}
+			ul{
+				display: block;
+				float: none;
+				padding-left: 0;
+				clear: both;
+			}
+		}
+		.intro{
+			.introinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				h3{
+					padding-bottom: 20px;
+					font-size: 30px;
+					line-height: 42px;
+				}
+				a{
+					font-size: 22px;
+				}
+				.viewworks{
+					font-size: 18px;
+				}
+			}
+			p{
+				display: none;
+			}
+		}
+		.timeline{
+			.timelineinner{
+				nav{
+					width: auto;
+					height: 5px;
+					left: 30px;
+					top: 30px;
+					padding-top: 0;
+					padding-left: 10px;
+					li{
+						left: -7px;
+						float: left;
+						top:-9px;
+						margin-right: 45px;
+						display: block;
+						a{
+							span{
+								position: relative;
+								top: 25px;
+								left: 41px;
+								color:#000;
+							}
+						}
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+				.building{
+					display: none;
+				}
+				.timelineitems{
+					padding: 90px 30px 30px 30px ;
+				}
+				article{
+					padding-left: 0;
+					.place{
+						margin-bottom: 20px;
+					}
+					.story{
+						width: auto;
+						p{
+							&:last-child{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+//sm only
+@media(min-width: 768px) and (max-width: 991px) {
+}
+
+//small and up
+@media(min-width: 768px) {
+
+}
+
+//md only
+@media(min-width: 992px) and (max-width: 1199px) {
+}
+
+//md and up
+@media(min-width: 992px) {
+}
+
+//lg and up
+@media(min-width: 1200px) {
+
+}
