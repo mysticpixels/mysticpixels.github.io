@@ -2,8 +2,10 @@
 //responsive rules
 //***************************************************************************************//
 
-//xs only
-@media(max-width: 767px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
 	body{
 		header{
 			.headerinner{
@@ -16,8 +18,9 @@
 				float:none;
 			}
 			h1{
-				font-size: 40px;
+				font-size: 56px;
 				line-height: 50px;
+				margin-bottom: 15px;
 			}
 			h2{
 				font-size: 18px;
@@ -30,19 +33,21 @@
 			}
 		}
 		.intro{
+			padding-bottom: 20px;
 			.introinner{
 				padding-left: 30px;
 				padding-right: 30px;
 				h3{
+					// display: none;
 					padding-bottom: 20px;
 					font-size: 30px;
 					line-height: 42px;
 				}
 				a{
-					font-size: 22px;
+					font-size: 18px;
 				}
 				.viewworks{
-					font-size: 18px;
+					font-size: 22px;
 				}
 			}
 			p{
@@ -50,30 +55,63 @@
 			}
 		}
 		.timeline{
+			background-image: url(../../images/cloudbg1.png);
+			background-position: center bottom;
+			position: static;
 			.timelineinner{
+				position: relative;
+				background: none!important;
 				nav{
-					width: auto;
-					height: 5px;
-					left: 30px;
-					top: 30px;
-					padding-top: 0;
-					padding-left: 10px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: auto;
+					background: none;
+					padding: 0;
 					li{
-						left: -7px;
+						position: static;
 						float: left;
-						top:-9px;
-						margin-right: 45px;
+						width: 20%;
+						top:auto;
+						margin-right: 0;
 						display: block;
+						&.active{
+							left: 0;
+							a{
+								width: auto;
+								height:auto;
+								background: #000;
+								color: #fff;
+								font-size: 22px;
+							}
+						}
 						a{
+							line-height: auto;
+							text-indent: 0;
+							position: static;
+							height: auto;
+							width: auto;
+							text-align: center;
+							border-radius: 0;
+							border:none;
+							margin-bottom: 0;
+							padding:20px 10px;
+							background: #acac94;
+							color:#fff;
 							span{
-								position: relative;
-								top: 25px;
-								left: 41px;
-								color:#000;
+								
+							}
+							&:hover{
+								background: #000;
+								color: #fff;
 							}
 						}
 						&:last-child{
 							margin-right: 0;
+							a{
+								border-right: solid 1px #777;
+							}
 						}
 					}
 				}
@@ -99,27 +137,87 @@
 				}
 			}
 		}
+		.specialities{
+			.specialitiesinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-bottom: 40px;
+				li{
+					display: block;
+					clear: both;
+					float: none;
+					a{
+						height: 40px;
+						width: 100%;
+						margin: 0 0 10px 0;
+						display: block;
+						background-size: 100%;
+						span{
+							position: static;
+						}
+					}
+				}
+			}
+		}
 	}	
 }
 
-//sm only
-@media(min-width: 768px) and (max-width: 991px) {
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
 }
 
-//small and up
-@media(min-width: 768px) {
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+/*and (orientation : landscape)*/ {
 
 }
 
-//md only
-@media(min-width: 992px) and (max-width: 1199px) {
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+/*and (orientation : portrait)*/ {
+	body{
+		background: green;
+	}
+
 }
 
-//md and up
-@media(min-width: 992px) {
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+body{
+	background: red;
+}
 }
 
-//lg and up
-@media(min-width: 1200px) {
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
 
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
