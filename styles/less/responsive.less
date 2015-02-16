@@ -191,17 +191,26 @@ and (max-width : 480px) {
 		}
 		footer{
 			.footerinner{
-				position: relative;
-				> img{
+				.footerdp{
 					position: absolute;
-					left: 34%;
-					bottom: -30px;
-					width: 20%;
-					border: solid 5px #fff;
+					top: 30px;
+					> img{
+						width: 80px;
+						border: solid 5px #fff;
+					}
+					span{
+						position: absolute;
+						left: 0;
+						top: -10px;
+					}
 				}
 				.footerText{
 					padding: 0;
 					width: 100%;
+					> p{
+						padding-bottom: 20px;
+						padding-left: 100px;
+					}
 				}
 			}
 		}
@@ -214,14 +223,12 @@ and (min-width : 321px)
 and (max-width: 767px) {
 	body{
 		header, section, footer{
-			width: 100%;
+		width: 100%;
+			.headerinner, .introinner, .specialitiesinner, .footerinner{
+				padding: 20px 30px 30px 30px;
+			}
 		}
 		header{
-			.headerinner{
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-bottom: 20px;
-			}
 			.hdrs{
 				display: block;
 				float:none;
@@ -381,9 +388,43 @@ and (max-width: 767px) {
 						margin: 0 0 10px 0;
 						display: block;
 						background:#fff;
+						border-radius: 0;
+						font-size: 24px;
+						padding: 15px;
 						span{
 							position: static;
+							padding: 0;
 						}
+						&:hover{
+							border-color: #000;
+							transition: all 0.3s ease;
+							padding-top: 20px;
+						}
+					}
+				}
+			}
+		}
+		footer{
+			.footerinner{
+				.footerdp{
+					position: absolute;
+					top: 30px;
+					> img{
+						width: 80px;
+						border: solid 5px #fff;
+					}
+					span{
+						position: absolute;
+						left: 0;
+						top: -10px;
+					}
+				}
+				.footerText{
+					padding: 0;
+					width: 100%;
+					> p{
+						padding-bottom: 20px;
+						padding-left: 100px;
 					}
 				}
 			}
