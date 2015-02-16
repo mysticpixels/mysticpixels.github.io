@@ -9,13 +9,11 @@ and (max-width : 480px) {
 	body{
 		header, section, footer{
 		width: 100%;
+			.headerinner, .introinner, .specialitiesinner, .footerinner{
+				padding: 20px 30px 30px 30px;
+			}
 		}
 		header{
-			.headerinner{
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-bottom: 20px;
-			}
 			.hdrs{
 				display: block;
 				float:none;
@@ -188,6 +186,22 @@ and (max-width : 480px) {
 							padding-top: 20px;
 						}
 					}
+				}
+			}
+		}
+		footer{
+			.footerinner{
+				position: relative;
+				> img{
+					position: absolute;
+					left: 34%;
+					bottom: -30px;
+					width: 20%;
+					border: solid 5px #fff;
+				}
+				.footerText{
+					padding: 0;
+					width: 100%;
 				}
 			}
 		}
