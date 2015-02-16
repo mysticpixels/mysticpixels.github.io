@@ -6,6 +6,11 @@
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
+	body header,
+	body section,
+	body footer{
+		width: 100%;
+	}
 	body{
 		header{
 			.headerinner{
@@ -69,6 +74,9 @@ and (max-width : 480px) {
 					height: auto;
 					background: none;
 					padding: 0;
+					border-style: solid;
+					border-width: 1px 0 1px 0;
+					border-color: #ccc;
 					li{
 						position: static;
 						float: left;
@@ -84,6 +92,12 @@ and (max-width : 480px) {
 								background: #000;
 								color: #fff;
 								font-size: 22px;
+								&:after{
+									display: block;
+									height: 30px;
+									width: 30px;
+									border-right:10px solid red;
+								}
 							}
 						}
 						a{
@@ -97,8 +111,8 @@ and (max-width : 480px) {
 							border:none;
 							margin-bottom: 0;
 							padding:20px 10px;
-							background: #acac94;
-							color:#fff;
+							background: #fff;
+							color:#000;
 							span{
 								
 							}
@@ -110,7 +124,7 @@ and (max-width : 480px) {
 						&:last-child{
 							margin-right: 0;
 							a{
-								border-right: solid 1px #777;
+								
 							}
 						}
 					}
@@ -194,9 +208,6 @@ and (max-width : 1024px)
 and (min-width : 768px) 
 and (max-width : 1024px) 
 /*and (orientation : portrait)*/ {
-	body{
-		background: green;
-	}
 
 }
 
@@ -204,9 +215,6 @@ and (max-width : 1024px)
 @media only screen 
 and (min-width : 1224px) {
 /* Styles */
-body{
-	background: red;
-}
 }
 
 /* Large screens ----------- */
