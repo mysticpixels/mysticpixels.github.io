@@ -87,20 +87,30 @@ and (max-width : 480px) {
 						&.active{
 							left: 0;
 							a{
+								position: relative;
 								width: auto;
 								height:auto;
 								background: #000;
 								color: #fff;
 								font-size: 22px;
-								&:after{
-									display: block;
-									height: 30px;
-									width: 30px;
-									border-right:10px solid red;
+								:after {
+									top: 100%;
+									left: 45%;
+									border: solid transparent;
+									content: " ";
+									height: 0;
+									width: 0;
+									position: absolute;
+									pointer-events: none;
+									border-color: rgba(0, 0, 0, 0);
+									border-top-color: #000;
+									border-width: 10px;
+									margin-left: -10px;
 								}
 							}
 						}
 						a{
+							top: 0;
 							line-height: auto;
 							text-indent: 0;
 							position: static;
@@ -160,12 +170,13 @@ and (max-width : 480px) {
 					display: block;
 					clear: both;
 					float: none;
+					margin: 0;
 					a{
 						height: 40px;
-						width: 100%;
+						width: auto;
 						margin: 0 0 10px 0;
 						display: block;
-						background-size: 100%;
+						background:#fff;
 						span{
 							position: static;
 						}
@@ -178,8 +189,187 @@ and (max-width : 480px) {
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
-and (min-width : 321px) {
-/* Styles */
+and (min-width : 321px)
+and (max-width: 768px) {
+	body header,
+	body section,
+	body footer{
+		width: 100%;
+	}
+	body{
+		header{
+			.headerinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-bottom: 20px;
+			}
+			.hdrs{
+				display: block;
+				float:none;
+			}
+			h1{
+				font-size: 56px;
+				line-height: 50px;
+				margin-bottom: 15px;
+			}
+			h2{
+				font-size: 18px;
+			}
+			ul{
+				display: block;
+				float: none;
+				padding-left: 0;
+				clear: both;
+			}
+		}
+		.intro{
+			padding-bottom: 20px;
+			.introinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				h3{
+					// display: none;
+					padding-bottom: 20px;
+					font-size: 30px;
+					line-height: 42px;
+				}
+				a{
+					font-size: 18px;
+				}
+				.viewworks{
+					font-size: 22px;
+				}
+			}
+			p{
+				display: none;
+			}
+		}
+		.timeline{
+			background-image: url(../../images/cloudbg1.png);
+			background-position: center bottom;
+			position: static;
+			.timelineinner{
+				position: relative;
+				background: none!important;
+				nav{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: auto;
+					background: none;
+					padding: 0;
+					border-style: solid;
+					border-width: 1px 0 1px 0;
+					border-color: #ccc;
+					li{
+						position: static;
+						float: left;
+						width: 20%;
+						top:auto;
+						margin-right: 0;
+						display: block;
+						&.active{
+							left: 0;
+							a{
+								position: relative;
+								width: auto;
+								height:auto;
+								background: #000;
+								color: #fff;
+								font-size: 22px;
+								:after {
+									top: 100%;
+									left: 45%;
+									border: solid transparent;
+									content: " ";
+									height: 0;
+									width: 0;
+									position: absolute;
+									pointer-events: none;
+									border-color: rgba(0, 0, 0, 0);
+									border-top-color: #000;
+									border-width: 10px;
+									margin-left: -10px;
+								}
+							}
+						}
+						a{
+							top: 0;
+							line-height: auto;
+							text-indent: 0;
+							position: static;
+							height: auto;
+							width: auto;
+							text-align: center;
+							border-radius: 0;
+							border:none;
+							margin-bottom: 0;
+							padding:20px 10px;
+							background: #fff;
+							color:#000;
+							span{
+								
+							}
+							&:hover{
+								background: #000;
+								color: #fff;
+							}
+						}
+						&:last-child{
+							margin-right: 0;
+							a{
+								
+							}
+						}
+					}
+				}
+				.building{
+					display: none;
+				}
+				.timelineitems{
+					padding: 90px 30px 30px 30px ;
+				}
+				article{
+					padding-left: 0;
+					.place{
+						margin-bottom: 20px;
+					}
+					.story{
+						width: auto;
+						p{
+							&:last-child{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.specialities{
+			.specialitiesinner{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-bottom: 40px;
+				li{
+					display: block;
+					clear: both;
+					float: none;
+					margin: 0;
+					a{
+						height: 40px;
+						width: auto;
+						margin: 0 0 10px 0;
+						display: block;
+						background:#fff;
+						span{
+							position: static;
+						}
+					}
+				}
+			}
+		}
+	}	
 }
 
 /* Smartphones (portrait) ----------- */
