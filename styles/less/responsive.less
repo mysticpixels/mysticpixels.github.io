@@ -442,7 +442,76 @@ and (max-width : 320px) {
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px) {
-/* Styles */
+body{
+	header, section, footer{
+	width: 100%;
+		.headerinner, .introinner, .specialitiesinner, .footerinner{
+			padding: 20px 30px 30px 30px;
+		}
+	}
+	header{
+		.hdrs{
+			display: block;
+			float: none;
+		}
+		ul{
+			float: none;
+			padding-left: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+	}
+	.timeline{
+		.timelineinner{
+			nav{
+				z-index:999;
+			}
+			article{
+				h4{
+					margin-bottom: 10px;
+				}
+				.story{
+					width: 70%;
+					padding: 10px;
+					background: rgba(255,255,255,0.7);
+				}
+				.building{
+					width: 600px;
+				}
+				&.chennaistory {
+					.building{
+						background-position: -85px bottom;
+					}
+				}
+				&.coimbatorestory {
+					.building{
+						background-position: -3125px bottom;
+					}
+				}
+				&.noidastory {
+					.building{
+						background-position: -2320px bottom;
+					}
+				}
+				&.bangalorestory {
+					.building{
+						background-position: -1645px bottom;
+					}
+				}
+				&.infystory {
+					.building{
+						background-position: -771px bottom;
+						width: 670px;
+					}
+				}
+			}
+		}
+	}
+	.specialities{
+		h3{
+		}
+	}
+}
 }
 
 /* iPads (landscape) ----------- */
