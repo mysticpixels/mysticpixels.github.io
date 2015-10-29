@@ -139,38 +139,86 @@ function formWatchOn(professionOption, resumeformObject, resumePreview){
 
 	//update skills
 	function updateSkills(){
-		var actionRemoveSkill, skillsFieldset=document.getElementById('skills'), btnAddSkills=document.getElementById('add_skill'), i=1;
+		var actionRemoveSkill, skillsFieldset=document.getElementById('skills'), btnAddSkills=document.getElementById('add_skill'), i=1, j;
 		var actionRemoveSkill, removeSkillCount;
 		btnAddSkills.addEventListener('click', addSkills, false);
+		for(j=0;j<skillsFieldset.elements.length;j++){
+			skillsFieldset.elements[j].addEventListener("keyup", writeSkills, false);
+		}
+		function writeSkills(){
+			console.log('keyup');
+		}
 		function addSkills(e){
-			console.log(skillsFieldset.childNodes);
-			var labelTextStr='Skill'+(i+1);
-			var skillsetlabel=document.createElement('label');
-			var labelText=document.createTextNode(labelTextStr);
-			var inputField=document.createElement('input');
-			inputField.id="input_skill"+i;
-			inputField.setAttribute('name', 'skill'+i);
-			inputField.setAttribute('type', 'text');
-			var selectField=document.createElement('select');
-			var removeLink=document.createElement('a');
-			var removeLinkText=document.createTextNode('Remove');
-			removeLink.appendChild(removeLinkText);
-			removeLink.setAttribute('href', '#');
-			removeLink.className+='muted';
-			removeLink.className+=' removeSkill';
-			
-			skillsetlabel.appendChild(labelText);
-			skillsetlabel.appendChild(inputField);
-			skillsetlabel.appendChild(selectField);
-			skillsetlabel.appendChild(removeLink);
-			skillsFieldset.insertBefore(skillsetlabel, btnAddSkills);
-			actionRemoveSkill=document.getElementsByClassName('removeSkill');
-			removeSkillCount=actionRemoveSkill.length;
-			for(var c=0;c<removeSkillCount;c++){
-				//console.log(actionRemoveSkill[removeSkillCount-1]);
-				actionRemoveSkill[removeSkillCount-1].addEventListener('click',removeSkillGroup,false);
+			var childLen=skillsFieldset.children.length;
+			var lastLabel=skillsFieldset.children[childLen-2];//DOM object of the last label tag, so as to check the value of it
+			if((lastLabel.children[0].value=='')||(lastLabel.children[1].value=='default')){
+				console.log('no point in adding more skills if you cant fill the values in the existing text inputs fields!');
 			}
-			i++;
+			else{
+				// var labelTextStr='Skill'+(i+1);
+				var skillsetlabel=document.createElement('label');
+				// var labelText=document.createTextNode(labelTextStr);
+
+				//creating the input element and related attributes
+				var inputField=document.createElement('input');
+				inputField.id="input_skill"+i;
+				inputField.name='skill'+i;
+				inputField.type='text';
+				inputField.placeholder="Enter skill here";
+				// inputField.setAttribute('name', 'skill'+i);
+				// inputField.setAttribute('type', 'text');
+
+				//creating the select element, options and related attributes
+				var selectField=document.createElement('select');
+				var optionDefault= document.createElement('option');
+				optionDefault.text="Rate yourself";
+				optionDefault.value="default";
+				var option1= document.createElement('option');
+				option1.text="1";
+				option1.value="1";
+				var option2= document.createElement('option');
+				option2.text="2";
+				option2.value="2";
+				var option3= document.createElement('option');
+				option3.text="3";
+				option3.value="3";
+				var option4= document.createElement('option');
+				option4.text="4";
+				option4.value="4";
+				var option5= document.createElement('option');
+				option5.text="5";
+				option5.value="5";
+				selectField.appendChild(optionDefault);
+				selectField.appendChild(option1);
+				selectField.appendChild(option2);
+				selectField.appendChild(option3);
+				selectField.appendChild(option4);
+				selectField.appendChild(option5);
+
+				//creating the 'remove' link
+				var removeLink=document.createElement('a');
+				var removeLinkText=document.createTextNode('Remove');
+				removeLink.appendChild(removeLinkText);
+				removeLink.setAttribute('href', '#');
+				removeLink.className+='muted';
+				removeLink.className+=' removeSkill';
+				
+				//appending created elements to DOM
+				//skillsetlabel.appendChild(labelText);
+				skillsetlabel.appendChild(inputField);
+				skillsetlabel.appendChild(selectField);
+				skillsetlabel.appendChild(removeLink);
+				skillsFieldset.insertBefore(skillsetlabel, btnAddSkills);
+
+				//facilitating 'remove' of skillset fields
+				actionRemoveSkill=document.getElementsByClassName('removeSkill');
+				removeSkillCount=actionRemoveSkill.length;
+				for(var c=0;c<removeSkillCount;c++){
+					//console.log(actionRemoveSkill[removeSkillCount-1]);
+					actionRemoveSkill[removeSkillCount-1].addEventListener('click',removeSkillGroup,false);
+				}
+				i++;
+			}
 		}
 		function removeSkillGroup(e){
 			var removable=e.target.parentNode;
