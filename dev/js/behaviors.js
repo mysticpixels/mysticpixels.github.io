@@ -3,6 +3,8 @@
 ==========================================*/
 
 /*----------  functions  ----------*/
+
+// daytime greeting generation
 function greetUser(){
 	var greetingPlaceholder=document.querySelector('h1');
 	var timeofDay= new Date();

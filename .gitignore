@@ -1,2 +1,6 @@
 .DS_Store
 *.sublime*
+*.map
+node_modules
+.sass-cache
+.editorconfig

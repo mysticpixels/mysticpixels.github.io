@@ -1,0 +1,26 @@
+{
+  "name": "ranjithkumarr.com",
+  "version": "0.0.1",
+  "description": "Online Portfolio of Ranjithkumar Rajarethinam, a UX Designeer, Houston, TX, originally from India",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysticpixels/mysticpixels.github.io.git"
+  },
+  "author": "ranjithkumarr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mysticpixels/mysticpixels.github.io/issues"
+  },
+  "homepage": "https://github.com/mysticpixels/mysticpixels.github.io#readme"
+}

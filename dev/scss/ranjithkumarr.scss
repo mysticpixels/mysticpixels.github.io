@@ -1,0 +1,70 @@
+/*===================================
+=            Core styles            =
+===================================*/
+
+body{
+		padding:0;
+		margin: 0;
+		background: url(../../assets/images/bg.jpg) no-repeat left 100px;
+	}
+	a{
+		color: #84afdc;
+	}
+	.header{
+		background: #000;
+		
+	}
+	h1{
+		text-align:center;
+		font-size:40px;
+		padding:30px 0 20px 0;
+		margin-top: 0;
+		font-family: 'Open Sans', Arial;
+		font-weight: 300;
+		color:#fff; 
+		text-shadow: 2px 2px 10px #000;
+	}
+	h1 span{
+		color: #3699df;
+	}
+	h2{
+		text-align:center;
+		padding-bottom:10px; 
+		font-size:26px;
+		max-width:60%;
+		margin:auto;
+		/*font-family: 'Crafty Girls', cursive;*/
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 300;
+		color:#c7c7c7;
+		text-shadow: 2px 2px 10px #000;
+		border-bottom: dotted 1px #646363;
+	}
+	h2 span{
+		font-size:2em;
+		display:block;
+		margin-bottom: 10px;
+	}
+	h3{
+		text-align: center;
+		color: #bcbbbb;
+		display: block;
+		margin: auto;
+		max-width:60%;
+		height: auto;
+		padding: 10px 0;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 300;
+		border-bottom: dotted 1px #646363;
+	}
+	h4{
+		text-align: center;
+		color: #898585;
+		display: block;
+		margin: auto;
+		max-width:70%;
+		height: auto;
+		padding: 10px 0;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 200;
+	}
